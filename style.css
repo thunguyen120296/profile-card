@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --white-color: #fff;
+}
+body{
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    font-size: 1.1em;
+    color: var(--dark-gray);
+    letter-spacing: 1px;
+    position: relative;
+}
+h2{
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    font-size: 1.7em;
+}
+h3{
+    font-size: 1.3em;
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+span{
+    color: var(--dark-gray);
+    margin-left: 15px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px;
+    position: relative;
+}
+.box{
+    width: 450px;
+    background: var(--white-color);
+    text-align: center;
+    border-radius: 15px;
+    z-index: 1;
+}
+.bg-top{
+    position: absolute;
+    background: url(/images/bg-pattern-top.svg) bottom right no-repeat;
+    background-size: cover;
+    padding: 300px;
+    top: 5%;
+    left: 0%;
+    transform: translate(-10%, -25%);
+}
+.bg-bottom{
+    position: absolute;
+    background: url(/images/bg-pattern-bottom.svg) bottom right no-repeat;
+    background-size: cover;
+    padding: 300px;
+    top: 60%;
+    left: 80%;
+    transform: translate(-10%, -25%);
+}
+.box__header{
+    background-image: url('/images/bg-pattern-card.svg');
+    border-radius: 15px 15px 0 0;
+    padding-top: 150px;
+    position: relative;
+}
+.box__header img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    border-radius: 100%;
+    border: 5px solid var(--white-color);
+}
+.box__body{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.box__footer{
+    border-top: 2px solid var(--dark-gray);
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.attribution{
+    color: #fff;
+}
+
+.attribution a{
+    color: var(--desaturated-blue);
+}
+
+@media screen and (max-width: 375px) {
+    h2{
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 0.9em;
+    };
+    .bg-bottom{
+        display: none;
+    }
+    .bg-top{
+        display: none;
+    }
+}
